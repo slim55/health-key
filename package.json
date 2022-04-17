@@ -1,0 +1,31 @@
+{
+  "name": "health-key",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "bootstrap": "4.x.x",
+    "core-js": "^3.19.3",
+    "material-icons": "^1.10.8",
+    "nuxt": "^2.15.8",
+    "nuxt-typed-vuex": "^0.3.0",
+    "vue": "^2.6.14",
+    "vue-anchor-navigate": "^1.0.6",
+    "vue-server-renderer": "^2.6.14",
+    "vue-template-compiler": "^2.6.14",
+    "vue-yandex-maps": "^0.11.8",
+    "vuesax": "^4.0.1-alpha.25",
+    "webpack": "^4.46.0"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.15.8",
+    "@nuxt/typescript-build": "^2.1.0",
+    "sass": "^1.49.11",
+    "sass-loader": "10.1.1"
+  }
+}
