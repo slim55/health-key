@@ -85,7 +85,11 @@ export default {
 
   generate: {
     dir: 'docs',
-    crawler: false,
-    fallback: 'index.html',
+  },
+
+  target: 'static',
+
+  router: {
+    base: '/health-key/',
   },
 }
