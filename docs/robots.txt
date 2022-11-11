@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /yandex_583067b7955ae24f.html
+Disallow: /googlec8c2b13332591ee7.html

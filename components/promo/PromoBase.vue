@@ -47,5 +47,17 @@ export default Vue.extend({
 <style lang="scss">
   .promo {
     background: linear-gradient(0deg, #F2F4F6, #F2F4F6);
+
+    .content {
+      @media screen and (min-width: 1200px) {
+        font-size: 1.2rem;
+      }
+
+      h1 {
+        @media screen and (min-width: 1200px) {
+          font-size: 2.5em;
+        }
+      }
+    }
   }
 </style>

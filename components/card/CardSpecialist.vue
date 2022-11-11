@@ -1,5 +1,5 @@
 <template>
-  <vs-card class="card-specialist" type="2">
+  <vs-card class="card-specialist" type="1">
     <template #title>
       <h3>{{ name }}</h3>
     </template>
@@ -41,8 +41,12 @@ export default Vue.extend({
 
 <style lang="scss">
 .card-specialist {
-  .vs-card__img {
-    align-items: flex-start;
+  .vs-card {
+    cursor: default;
+
+    &__img {
+      align-items: flex-start;
+    }
   }
 }
 </style>

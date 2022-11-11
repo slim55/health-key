@@ -45,6 +45,10 @@ export default Vue.extend({
   font-size: 1.75rem;
   font-weight: bold;
 
+  @media screen and (max-width: 767px) {
+    font-size: 1.5rem;
+  }
+
   &.is-small {
     font-size: 1.25rem;
   }

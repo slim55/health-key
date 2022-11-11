@@ -202,3 +202,18 @@ img {
 .vs-card-content.type-2 .vs-card__text {
   width: 100%;
 }
+
+.vs-sidebar__item {
+  position: relative;
+
+  &__text {
+    a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

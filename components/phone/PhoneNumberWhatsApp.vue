@@ -1,5 +1,5 @@
 <template>
-  <a :href="`tel:${phone}`" class="phone-number">{{ phone }}</a>
+  <a :href="`https://wa.me/${transformPhone}`" class="phone-number-whats-app">{{ phone }}</a>
 </template>
 
 <script lang="ts">
@@ -10,18 +10,23 @@ export type PropsType = {
 };
 
 export default Vue.extend({
-  name: 'PhoneNumber',
+  name: 'PhoneNumberWhatsApp',
   props: {
     phone: {
       type: String as PropType<PropsType['phone']>,
       required: true,
     },
   },
+  computed: {
+    transformPhone() {
+      return this.phone.replace(/\s/g, '');
+    },
+  },
 });
 </script>
 
 <style lang="scss">
-.phone-number {
+.phone-number-whats-app {
   white-space: nowrap;
   color: #000;
   text-decoration: none;

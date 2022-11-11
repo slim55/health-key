@@ -25,6 +25,7 @@ export default Vue.extend({
     footerBase(): FooterBasePropsType {
       return {
         phone: this.$accessor.phone,
+        phone2: this.$accessor.phone2,
         address: this.$accessor.address,
       };
     },

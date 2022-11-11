@@ -4,9 +4,17 @@
       <div class="col-12 col-sm-3 d-none d-sm-block">
         <logo-base/>
       </div>
-      <div class="col-12 col-sm-6 text-center">{{ address }}</div>
+      <div class="col-12 col-sm-6 text-center" v-html="address"/>
       <div class="col-12 col-sm-3 mt-2 mt-sm-0 text-center text-sm-right">
-        <phone-number v-bind="phoneNumber"/>
+        <p>
+          Детский массаж - <phone-number v-bind="phoneNumber"/>
+        </p>
+        <p class="mt-1">
+          Взрослый массаж - <phone-number v-bind="phoneNumber2"/>
+        </p>
+        <p class="mt-1">
+          WhatsApp - <phone-number-whats-app v-bind="phoneNumber"/>
+        </p>
       </div>
     </div>
   </footer>
@@ -16,8 +24,10 @@
 import Vue, { PropType } from 'vue';
 import { PropsType as PhoneNumberPropsType } from '@/components/phone/PhoneNumber.vue';
 
-export interface PropsType extends PhoneNumberPropsType {
+export interface PropsType {
   address: string;
+  phone: PhoneNumberPropsType['phone'];
+  phone2: PhoneNumberPropsType['phone'];
 }
 
 export default Vue.extend({
@@ -31,11 +41,20 @@ export default Vue.extend({
       type: String as PropType<PropsType['phone']>,
       required: true,
     },
+    phone2: {
+      type: String as PropType<PropsType['phone']>,
+      required: true,
+    },
   },
   computed: {
     phoneNumber(): PhoneNumberPropsType {
       return {
         phone: this.phone,
+      };
+    },
+    phoneNumber2(): PhoneNumberPropsType {
+      return {
+        phone: this.phone2,
       };
     },
   },

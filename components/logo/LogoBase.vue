@@ -15,6 +15,7 @@ export default Vue.extend({
 
 <style lang="scss">
 .logo {
+  white-space: nowrap;
   cursor: default;
 
   &__image {
@@ -25,7 +26,8 @@ export default Vue.extend({
   }
 
   &__name {
-    font-size: 14px;
+    white-space: nowrap;
+    font-size: 16px;
     font-weight: bold;
     color: #000;
   }

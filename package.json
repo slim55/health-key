@@ -9,6 +9,9 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/robots": "^2.5.0",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "@nuxtjs/yandex-metrika": "^1.4.0",
     "bootstrap": "4.x.x",
     "core-js": "^3.19.3",
     "material-icons": "^1.10.8",

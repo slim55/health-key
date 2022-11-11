@@ -4,8 +4,10 @@
       <div class="container position-relative">
         <div class="map__content text-center text-md-left">
           <title-base class="mb-4" size="is-small">{{ information.title }}</title-base>
-          <p>Адрес: {{ information.address }}</p>
-          <p class="mt-1">Телефон: <phone-number :phone="information.phone"/></p>
+          <p>Адрес: <span v-html="information.address"/></p>
+          <p class="mt-1">Детский массаж: <phone-number :phone="information.phone"/></p>
+          <p class="mt-1">Взрослый массаж: <phone-number :phone="information.phone2"/></p>
+          <p class="mt-1">WhatsApp: <phone-number-whats-app :phone="information.phone"/></p>
         </div>
       </div>
     </div>
@@ -14,9 +16,13 @@
         <template v-slot:marker="{ id }">
           <img v-if="balloonInfo(id).image" :src="balloonInfo(id).image" :alt="balloonInfo(id).name" width="280px"/>
           <br>
-          <b>{{ balloonInfo(id).name }}</b>
+          <b v-html="balloonInfo(id).name"/>
           <br>
-          Телефон: <phone-number :phone="balloonInfo(id).phone"/>
+          Детский массаж: <phone-number :phone="balloonInfo(id).phone"/>
+          <br>
+          Взрослый массаж: <phone-number :phone="balloonInfo(id).phone2"/>
+          <br>
+          WhatsApp: <phone-number-whats-app :phone="balloonInfo(id).phone"/>
         </template>
       </yandex-map-base>
     </div>
@@ -33,11 +39,14 @@ export type MarkersItemPropType = {
   image?: string;
   name: string;
   phone: PhoneNumberPropsType['phone'];
+  phone2: PhoneNumberPropsType['phone'];
 };
 export type InformationPropType = {
   title: string;
   address: string;
   phone: PhoneNumberPropsType['phone'];
+  phone2: PhoneNumberPropsType['phone'];
+  whatsapp: PhoneNumberPropsType['phone'];
 };
 
 export interface PropsType {
